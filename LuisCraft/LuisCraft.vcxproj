@@ -142,6 +142,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\renderEngine\Mesh.cpp" />
     <ClCompile Include="src\renderEngine\Shader.cpp" />
     <ClCompile Include="src\renderEngine\Window.cpp" />
     <ClCompile Include="src\vendor\glad.c" />
@@ -151,6 +152,7 @@
     <None Include="res\shaders\basic.vs" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\renderEngine\Mesh.h" />
     <ClInclude Include="src\renderEngine\Shader.h" />
     <ClInclude Include="src\renderEngine\Window.h" />
   </ItemGroup>
