@@ -9,6 +9,9 @@ public:
     ~Mesh();
 
     void bind() const;
+
+    inline unsigned int indexCount() const { return count; }
 private:
     unsigned int vao, vbo, ebo;
+    unsigned int count;
 };
