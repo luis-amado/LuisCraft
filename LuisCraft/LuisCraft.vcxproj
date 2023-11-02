@@ -143,6 +143,7 @@
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\renderEngine\Shader.cpp" />
+    <ClCompile Include="src\renderEngine\Window.cpp" />
     <ClCompile Include="src\vendor\glad.c" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\renderEngine\Shader.h" />
+    <ClInclude Include="src\renderEngine\Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
