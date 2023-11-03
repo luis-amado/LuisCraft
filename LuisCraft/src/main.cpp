@@ -14,49 +14,52 @@ int main() {
 
     Window window("LuisCraft", 600, 600);
 
-    std::vector<float> vertices = {
-        // position           // tex coords
-        -0.5f,  0.5f, 0.0f,   0.0f, 1.0f,   // top left
-        -0.5f, -0.5f, 0.0f,   0.0f, 0.0f,   // bottom left
-         0.5f, -0.5f, 0.0f,   1.0f, 0.0f,   // bottom right
-         0.5f,  0.5f, 0.0f,   1.0f, 1.0f    // top right
+    float xbase = 100.0f/256;
+    float ybase = 60.0f/256;
+    float w = 24.0f/256, h = 26.0f/256;
+
+    std::vector<float> quadVerts = {
+        0.0f, 1.0f, 0.0f,  xbase, ybase,
+        0.0f, 0.0f, 0.0f,  xbase, ybase+h,
+        1.0f, 0.0f, 0.0f,  xbase+w, ybase+h,
+        1.0f, 1.0f, 0.0f,  xbase+w, ybase
     };
-    std::vector<unsigned int> indices = {
-        0, 1, 2, // bottom left tri
-        2, 3, 0  // top right tri
+
+    std::vector<unsigned int> quadIndices = {
+        0, 1, 2,
+        2, 3, 0
     };
 
-    Mesh mesh(vertices, indices);
+    Mesh quad(quadVerts, quadIndices);
+    Shader fontShader("res/shaders/font.vs", "res/shaders/font.fs");
+    Texture minecraftFont("res/fonts/minecraft.png");
 
-    Shader shader("res/shaders/basic.vs", "res/shaders/basic.fs");
+    fontShader.use();
 
-    Texture texture("res/textures/andesite.png");
+    glm::vec3 pos(10, 10, 0.0f);
+    glm::vec3 size(24.0f, 26.0f, 1.0f);
+    float scale = 12.0f / 26.0f;
+    glm::mat4 transform(1.0f);
+    transform = glm::translate(transform, pos);
+    transform = glm::scale(transform, glm::vec3(scale,scale,1.0f));
+    transform = glm::scale(transform, size);
+    fontShader.setUniformMatrix("transform", transform);
 
-    glm::vec3 cameraPos(0.0f, 0.0f, 2.0f);
+    glm::mat4 projection = glm::ortho(0.0f, 600.0f, 0.0f, 600.0f);
+    fontShader.setUniformMatrix("projection", projection);
 
-
-    shader.use();
-    glm::mat4 model(1.0f);
-    model = glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
-    model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-    shader.setUniformMatrix("model", model);
-
-    glm::mat4 view(1.0f);
-    view = glm::translate(view, -cameraPos);
-    shader.setUniformMatrix("view", view);
-
-    glm::mat4 persp;
-    persp = glm::perspective(glm::radians(70.0f), 1.0f, 0.1f, 100.0f);
-    shader.setUniformMatrix("projection", persp);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     while (!window.shouldClose()) {
+
         glClear(GL_COLOR_BUFFER_BIT);
 
-
-        mesh.bind();
-        texture.bind();
-        glDrawElements(GL_TRIANGLES, mesh.indexCount(), GL_UNSIGNED_INT, nullptr);
+        fontShader.use();
+        quad.bind();
+        minecraftFont.bind();
+        glDrawElements(GL_TRIANGLES, quad.indexCount(), GL_UNSIGNED_INT, nullptr);
 
         window.update();
     }

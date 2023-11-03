@@ -40,6 +40,9 @@
   <ItemGroup>
     <None Include="res\shaders\basic.vs" />
     <None Include="res\shaders\basic.fs" />
+    <None Include="res\shaders\font.vs" />
+    <None Include="res\shaders\font.fs" />
+    <None Include="res\fonts\minecraft.fnt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\renderEngine\Shader.h">
@@ -60,6 +63,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="res\textures\coal_ore.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\fonts\minecraft.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
