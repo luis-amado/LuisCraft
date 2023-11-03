@@ -37,12 +37,16 @@ void Shader::use() const {
     glUseProgram(id);
 }
 
-void Shader::setUniform(std::string uniform, float value) {
+void Shader::setUniform1f(const std::string& uniform, float value) {
     glUniform1f(getUniformLocation(uniform), value);
 }
 
-void Shader::setUniform(std::string uniform, glm::vec3 value) {
+void Shader::setUniform3f(const std::string& uniform, const glm::vec3& value) {
     glUniform3f(getUniformLocation(uniform), value.x, value.y, value.z);
+}
+
+void Shader::setUniformMatrix(const std::string& uniform, const glm::mat4& value) {
+    glUniformMatrix4fv(getUniformLocation(uniform), 1, GL_FALSE, glm::value_ptr(value));
 }
 
 std::string Shader::getSource(const char* file) const {
@@ -81,7 +85,7 @@ void Shader::checkCompilation(unsigned int shader, ShaderType type) const {
 
 }
 
-unsigned int Shader::getUniformLocation(std::string uniform) {
+unsigned int Shader::getUniformLocation(const std::string& uniform) {
 
     if (uniforms.find(uniform) == uniforms.end()) {
         unsigned int location = glGetUniformLocation(id, uniform.c_str());

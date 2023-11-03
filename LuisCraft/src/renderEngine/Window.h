@@ -12,6 +12,8 @@ public:
 
     void update() const;
     bool shouldClose() const;
+
+    inline GLFWwindow* handle() const { return window; }
 private:
     GLFWwindow* window;
 };

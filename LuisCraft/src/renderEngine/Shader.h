@@ -7,6 +7,8 @@
 #include <string>
 #include <unordered_map>
 #include <glm/vec3.hpp>
+#include <glm/mat4x4.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 class Shader {
 public:
@@ -15,8 +17,9 @@ public:
 
     void use() const;
 
-    void setUniform(std::string uniform, float value);
-    void setUniform(std::string uniform, glm::vec3 value);
+    void setUniform1f(const std::string& uniform, float value);
+    void setUniform3f(const std::string& uniform, const glm::vec3& value);
+    void setUniformMatrix(const std::string& uniform, const glm::mat4& matrix);
 protected:
     unsigned int id;
 
@@ -30,5 +33,5 @@ private:
     std::string getSource(const char* file) const;
     void checkCompilation(unsigned int shader, ShaderType type) const;
 
-    unsigned int getUniformLocation(std::string uniform);
+    unsigned int getUniformLocation(const std::string& uniform);
 };
