@@ -17,8 +17,10 @@ public:
 
     void use() const;
 
+    void setUniform1i(const std::string& uniform, int value);
     void setUniform1f(const std::string& uniform, float value);
     void setUniform3f(const std::string& uniform, const glm::vec3& value);
+    void setUniform4f(const std::string& uniform, const glm::vec4& value);
     void setUniformMatrix(const std::string& uniform, const glm::mat4& matrix);
 protected:
     unsigned int id;

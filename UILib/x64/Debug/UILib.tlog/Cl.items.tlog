@@ -1,0 +1,16 @@
+C:\dev\c++\LuisCraft\UILib\src\include\ui\constraints\AspectRatioConstraint.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\AspectRatioConstraint.obj
+C:\dev\c++\LuisCraft\UILib\src\include\ui\constraints\ConstraintSet.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\ConstraintSet.obj
+C:\dev\c++\LuisCraft\UILib\src\include\ui\constraints\PixelConstraint.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\PixelConstraint.obj
+C:\dev\c++\LuisCraft\UILib\src\include\ui\constraints\RelativeConstraint.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\RelativeConstraint.obj
+C:\dev\c++\LuisCraft\UILib\src\include\ui\constraints\RelativeOffsetConstraint.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\RelativeOffsetConstraint.obj
+C:\dev\c++\LuisCraft\UILib\src\include\ui\containers\Container.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\Container.obj
+C:\dev\c++\LuisCraft\UILib\src\include\ui\containers\RowContainer.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\RowContainer.obj
+C:\dev\c++\LuisCraft\UILib\src\include\ui\text\font\Font.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\Font.obj
+C:\dev\c++\LuisCraft\UILib\src\include\ui\text\font\FontMesher.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\FontMesher.obj
+C:\dev\c++\LuisCraft\UILib\src\include\ui\text\Text.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\Text.obj
+C:\dev\c++\LuisCraft\UILib\src\include\ui\text\TextBox.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\TextBox.obj
+C:\dev\c++\LuisCraft\UILib\src\include\ui\UIBlock.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\UIBlock.obj
+C:\dev\c++\LuisCraft\UILib\src\include\ui\UIQuad.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\UIQuad.obj
+C:\dev\c++\LuisCraft\UILib\src\Shader.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\Shader.obj
+C:\dev\c++\LuisCraft\UILib\src\include\ui\Canvas.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\Canvas.obj
+C:\dev\c++\LuisCraft\UILib\src\UITexture.cpp;C:\dev\c++\LuisCraft\UILib\x64\Debug\UITexture.obj

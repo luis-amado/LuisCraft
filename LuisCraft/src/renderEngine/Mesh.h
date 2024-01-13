@@ -5,10 +5,12 @@
 
 class Mesh {
 public:
-    Mesh(std::vector<float> vertices, std::vector<unsigned int> indices);
+    Mesh();
+    Mesh(const std::vector<float>& vertices, const std::vector<unsigned int>& indices);
     ~Mesh();
 
     void bind() const;
+    void setMesh(const std::vector<float>& vertices, const std::vector<unsigned int>& indices);
 
     inline unsigned int indexCount() const { return count; }
 private:

@@ -15,6 +15,8 @@ Window::Window(std::string title, int width, int height) {
 
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
 }
 
 Window::~Window() {

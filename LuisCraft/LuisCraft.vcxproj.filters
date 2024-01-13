@@ -36,13 +36,46 @@
     <ClCompile Include="src\renderEngine\Texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\entity\player\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world\Chunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world\ChunkSection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world\World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\MathUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\init\BlockRegistry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\block\Block.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\init\Blocks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\NibbleArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\VoxelUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\basic.vs" />
     <None Include="res\shaders\basic.fs" />
-    <None Include="res\shaders\font.vs" />
-    <None Include="res\shaders\font.fs" />
-    <None Include="res\fonts\minecraft.fnt" />
+    <None Include="res\shaders\ui.vs" />
+    <None Include="res\shaders\ui.fs" />
+    <None Include="res\fonts\pixel_regular.json" />
+    <None Include="res\shaders\text.vs" />
+    <None Include="res\shaders\text.fs" />
+    <None Include="res\fonts\pixelated.fnt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\renderEngine\Shader.h">
@@ -57,6 +90,45 @@
     <ClInclude Include="src\renderEngine\Texture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\entity\player\Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\MathUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\world\Chunk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\world\ChunkSection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\Direction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\VoxelUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\world\World.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\world\ChunkCoord.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\init\BlockRegistry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\init\Blocks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\block\Block.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\init\BlockTextures.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\NibbleArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\textures\andesite.png">
@@ -65,8 +137,33 @@
     <Image Include="res\textures\coal_ore.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="res\fonts\minecraft.png">
+    <Image Include="res\textures\font\minecraft.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="res\textures\font\arial.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\textures\deepslate_bricks.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\textures\dirt.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\textures\block_atlas.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\textures\lightMap.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\textures\font\pixel_regular.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\textures\font\pixelated.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="..\Libraries\bin\FastNoise.dll" />
+    <CopyFileToFolders Include="..\Libraries\bin\FastNoiseD.dll" />
   </ItemGroup>
 </Project>

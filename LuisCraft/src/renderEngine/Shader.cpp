@@ -37,12 +37,20 @@ void Shader::use() const {
     glUseProgram(id);
 }
 
+void Shader::setUniform1i(const std::string& uniform, int value) {
+    glUniform1i(getUniformLocation(uniform), value);
+}
+
 void Shader::setUniform1f(const std::string& uniform, float value) {
     glUniform1f(getUniformLocation(uniform), value);
 }
 
 void Shader::setUniform3f(const std::string& uniform, const glm::vec3& value) {
     glUniform3f(getUniformLocation(uniform), value.x, value.y, value.z);
+}
+
+void Shader::setUniform4f(const std::string& uniform, const glm::vec4& value) {
+    glUniform4f(getUniformLocation(uniform), value.r, value.g, value.b, value.a);
 }
 
 void Shader::setUniformMatrix(const std::string& uniform, const glm::mat4& value) {
